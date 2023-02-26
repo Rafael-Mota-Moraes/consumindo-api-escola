@@ -6,7 +6,7 @@ import * as types from "../types";
 const requisicao = () =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
-      reject();
+      resolve();
     }, 600);
   });
 
