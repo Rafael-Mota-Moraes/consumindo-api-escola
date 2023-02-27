@@ -3,24 +3,19 @@ import { Nav } from "./styled";
 import { FaHome, FaSignInAlt, FaUserAlt } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 export default function Header() {
-  const botaoCliclado = useSelector((state) => state.example.botaoCliclado);
   return (
     <Nav>
       <Link to="/">
         <FaHome size={24} />
       </Link>
-      <Link to="/login">
+      <Link to="/register">
         <FaSignInAlt size={24} />
       </Link>
-      <Link to="/teste">
+      <Link to="/login">
         <FaUserAlt size={24} />
       </Link>
-      <p style={{ color: "#000" }}>
-        {botaoCliclado ? "Clicado" : "Não clicado"}
-      </p>
     </Nav>
   );
 }
