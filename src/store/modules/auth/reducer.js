@@ -19,6 +19,7 @@ export default function reducer(state = initialState, action) {
     }
 
     case types.LOGIN_FAILURE: {
+      console.log("Chegou aqui");
       const newState = { ...initialState };
       return newState;
     }
